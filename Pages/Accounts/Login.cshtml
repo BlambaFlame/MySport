@@ -1,0 +1,14 @@
+﻿@page
+@model MySport.Pages.Accounts.Login
+
+<form>
+    <legend>Вход</legend>
+    <div class="form-group">
+        <label>E-mail:</label><br/>
+        <input type="email"/><br/>
+        <label>Password:</label><br/>
+        <input type="password" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!$%^&*-]).{8,}$"/><br/>
+        <br/>
+        <input type="submit" value="Войти" class="btn btn-primary"/>
+    </div>
+</form>

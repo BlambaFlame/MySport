@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<style>
+   .leftstr, .rightstr {
+    float: left;
+    width: 35%; 
+   }
+   .rightstr {
+    text-align: right;
+   }
+</style>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SportsOnly</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">SportsOnly</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Index">Главная страница</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Политика приватности</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Виды Спорта
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            </div>
+                            <a class="dropdown-item" asp-area="" asp-page="/Football">Футбол</a>
+                            <div class="dropdown-divider">
+                            </div>
+                            <a class="dropdown-item" asp-area="" asp-page="/Basketball">Баскетбол</a>
+                            <div class="dropdown-divider">
+                            </div>
+                            <a class="dropdown-item" asp-area="" asp-page="/Hockey">Хоккей</a>
+                            <div class="dropdown-divider">
+                            </div>
+                            <a class="dropdown-item" asp-area="" asp-page="/Wrestling">Реслинг</a>
+                            <div class="dropdown-divider">
+                            </div>
+                            <a class="dropdown-item" asp-area="" asp-page="/Tennis">Теннис</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="nav-item">
+                    <a class="nav-link leftstr text-dark" asp-area="" asp-page="/Accounts/Login">Вход</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link rightstr text-dark" asp-area="" asp-page="/Accounts/Registrations">Регистрация</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Accounts/Profile">Профиль</a>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Contacts">О нас</a>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - MySport - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
